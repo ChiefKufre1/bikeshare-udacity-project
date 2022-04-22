@@ -7,7 +7,7 @@ CITY_DATA = { 'chicago': 'data/chicago.csv','New york city': 'data/new_york_city
                'washington': 'data/washington.csv', }
 
 #Function to figure out the filtering requirements of the user
-def filter_data():
+def get_filter():
     """
     Asks user to specify a city, month, and day to analyze.
     Args:
@@ -52,9 +52,7 @@ def filter_data():
 
     print(f"\nYou have chosen {month.title()} as your month.")
 
-    
-    
-    
+     
     DAY_LIST = ['all', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
     day = ''
     while day not in DAY_LIST:
@@ -158,7 +156,6 @@ def station_stats(df):
     Returns:
         None.
     """
-
     print('\nCalculating The Most Popular Stations and Trip...\n')
     start_time = time.time()
 
@@ -172,10 +169,7 @@ def station_stats(df):
 
     print(f"\nThe most commonly used end station: {common_end_station}")
 
-    #Uses str.cat to combine two columsn in the df
-    #Assigns the result to a new column 'Start To End'
-    #Uses mode on this new column to find out the most common combination
-    #of start and end stations
+    
     df['Start To End'] = df['Start Station'].str.cat(df['End Station'], sep=' to ')
     combo = df['Start To End'].mode()[0]
 
@@ -279,7 +273,7 @@ def display_data(df):
     while raw_data == 'yes':
 
         print("Do you wish to view more raw data?")
-        counter += 5
+        counter = counter + 5
         raw_data = input().lower()
 
         #If user opts for it, this displays next 5 rows of data
@@ -295,7 +289,7 @@ def display_data(df):
 #Main function to call all the previous functions
 def main():
     while True:
-        city, month, day = filter_data()
+        city, month, day = get_filter()
         df = load_data(city, month, day)
 
         display_data(df)
