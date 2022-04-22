@@ -49,3 +49,8 @@ Following the input received, the program prints the following details:
 - pandas - One of the libraries used for this.
 - numpy - One of the libraries used for this.
 - time - One of the libraries used for this.
+
+### Credit
+- Caleb Curry - his youtube channel helps in explaining some advance concept
+- pandas docs - pandas documentation was immensely helpful in understanding the implemention of pandas methods used in this project.
+- Udacity - Udacity's Data Analyst Nanodegree program and their instructors were extremely helpful while I was pursuing this project.
