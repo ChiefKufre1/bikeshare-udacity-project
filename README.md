@@ -36,4 +36,16 @@ Following the input received, the program prints the following details:
 - The youngest user (if available)
 - The most common birth year amongst users (if available)
 
+- The most common birth year amongst users (if available)
 
+### Requirements
+
+- Language: Python 3.6 or above
+- Libraries: pandas, numpy, time
+
+### Project was Built with
+
+- Python 3.6.6 - The language used to develop this.
+- pandas - One of the libraries used for this.
+- numpy - One of the libraries used for this.
+- time - One of the libraries used for this.
