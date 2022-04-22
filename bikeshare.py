@@ -52,9 +52,7 @@ def get_filter():
 
     print(f"\nYou have chosen {month.title()} as your month.")
 
-    
-    
-    
+     
     DAY_LIST = ['all', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
     day = ''
     while day not in DAY_LIST:
@@ -158,7 +156,6 @@ def station_stats(df):
     Returns:
         None.
     """
-
     print('\nCalculating The Most Popular Stations and Trip...\n')
     start_time = time.time()
 
@@ -172,10 +169,7 @@ def station_stats(df):
 
     print(f"\nThe most commonly used end station: {common_end_station}")
 
-    #Uses str.cat to combine two columsn in the df
-    #Assigns the result to a new column 'Start To End'
-    #Uses mode on this new column to find out the most common combination
-    #of start and end stations
+    
     df['Start To End'] = df['Start Station'].str.cat(df['End Station'], sep=' to ')
     combo = df['Start To End'].mode()[0]
 
