@@ -273,7 +273,7 @@ def display_data(df):
     while raw_data == 'yes':
 
         print("Do you wish to view more raw data?")
-        counter += 5
+        counter = counter + 5
         raw_data = input().lower()
 
         #If user opts for it, this displays next 5 rows of data
